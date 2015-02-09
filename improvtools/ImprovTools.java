@@ -45,5 +45,17 @@ public class ImprovTools {
 		GameRegistry.addShapelessRecipe(toughenedStoneSword, new Object[]{
 			new ItemStack(Items.stone_sword, 1), Blocks.cobblestone
 		});
+		//Unbreaking 1 diamond pick
+		ItemStack toughenedDiamondPick = new ItemStack(Items.diamond_pickaxe);
+		toughenedDiamondPick.addEnchantment(Enchantment.unbreaking, 1);
+		GameRegistry.addShapelessRecipe(toughenedDiamondPick, new Object[]{
+			new ItemStack(Items.diamond_pickaxe, 1), Items.diamond
+		});
+		//Unbreaking 8 diamond pick
+		ItemStack reenforcedDiamondPick = new ItemStack(Items.diamond_pickaxe);
+		reenforcedDiamondPick.addEnchantment(Enchantment.unbreaking, 8);
+		GameRegistry.addShapelessRecipe(reenforcedDiamondPick, new Object[]{
+			new ItemStack(Items.diamond_pickaxe, 1), Items.diamond, Items.diamond, Items.diamond, Items.diamond, Items.diamond, Items.diamond, Items.diamond, Items.diamond
+		});
 	}
 }
