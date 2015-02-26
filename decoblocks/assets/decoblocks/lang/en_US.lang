@@ -1,1 +1,6 @@
-tile.decoBlocks_cobblePlank.name=Cobblestone Wood Plank Block
+tile.decoBlocks_cobblePlank.oak.name=Cobblestone Wood Oak Plank Block
+tile.decoBlocks_cobblePlank.spruce.name=Cobblestone Wood Spruce Plank Block
+tile.decoBlocks_cobblePlank.birch.name=Cobblestone Wood Birch Plank Block
+tile.decoBlocks_cobblePlank.jungle.name=Cobblestone Wood Jungle Plank Block
+tile.decoBlocks_cobblePlank.acacia.name=Cobblestone Wood Acacia Plank Block
+tile.decoBlocks_cobblePlank.darkoak.name=Cobblestone Wood Dark Oak Plank Block

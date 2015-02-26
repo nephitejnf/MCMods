@@ -1,5 +1,5 @@
 {
-	"parent":"decoBlocks:block/cobblePlank_model",
+	"parent":"decoblocks:block/cobblePlankbirch_model",
 	"display":{
 		"thirdperson":{
 		"rotation":[10, -45, 170],
