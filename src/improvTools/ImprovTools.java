@@ -28,19 +28,22 @@ public class ImprovTools {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event){
-		//A Stone sharpened material
-		ToolMaterial SHARPENED_STONE = EnumHelper.addToolMaterial("S_STONE", 1, 131, 4.0F, 2.25F, 5);
 		//New item Sharpened Sword, for Stone.
-		SharpenedSword stoneSharpenedSword = new SharpenedSword(SHARPENED_STONE);
+		SharpenedSword stoneSharpenedSword = new SharpenedSword(Item.ToolMaterial.STONE);
 		GameRegistry.registerItem(stoneSharpenedSword, "sharpenedSword");
-		
+		//Iron Sharpened Sword
+		SharpenedSword ironSharpenedSword;
+		GameRegistry.registerItem(ironSharpenedSword = new SharpenedSword(Item.ToolMaterial.IRON), "iron_Sword");
 		//To prevent the server from rendering it.
 		if(event.getSide() == Side.CLIENT){
+			//RenderItem rItem3 = Minecraft.getMinecraft().getRenderItem();
+			//rItem3.getItemModelMesher().register(ironSharpenedSword, 0, new ModelResourceLocation(ImprovTools.MODID + ":" + ironSharpenedSword.getName(), "inventory"));
 			RenderItem rItem2 = Minecraft.getMinecraft().getRenderItem();
 			rItem2.getItemModelMesher().register(stoneSharpenedSword, 0, new ModelResourceLocation(ImprovTools.MODID + ":" + stoneSharpenedSword.getName(), "inventory"));
 		}
 		//Sets up poison sword
-		//PoisonSword poisonStoneSword = new PoisonSword();
+		PoisonSword poisonStoneSword = new PoisonSword(Item.ToolMaterial.STONE);
+		GameRegistry.registerItem(poisonStoneSword, "poisonSword");
 		//Suppose to render the sword
 		/*if(event.getSide() == Side.CLIENT){
 			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
@@ -52,6 +55,11 @@ public class ImprovTools {
 		GameRegistry.addShapelessRecipe(sharpenedStoneSword, new Object[]{
 			new ItemStack(Items.stone_sword, 1), Items.flint
 		});
+		/*ItemStack sharpenedIronSword = new ItemStack(ironSharpenedSword);
+		GameRegistry.addShapelessRecipe(sharpenedIronSword, new Object[]{
+			new ItemStack(Items.iron_sword, 1), Items.flint
+		});
+		*/
 		//A unbreaking 1 sword
 		ItemStack toughenedStoneSword = new ItemStack(Items.stone_sword);
 		toughenedStoneSword.addEnchantment(Enchantment.unbreaking, 1);
